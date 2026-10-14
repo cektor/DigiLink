@@ -85,6 +85,7 @@ Uygulamayı yükleyerek veya kullanarak bu politikada açıklanan uygulamaları 
 |---|---|---|---|
 | Çağrı işareti, parola, ad, QTH | Ses bağlantısı ağına giriş | Ses bağlantısı ağı (üçüncü taraf) | Hayır (temel işlev) |
 | Ses (yalnızca PTT sırasında) | Konuşmanın iletilmesi | Bağlı olduğunuz istasyon/röle/konferans | Hayır (temel işlev) |
+| Chat metin mesajları | Metin iletişimi | Bağlı olduğunuz konferans/istasyon | **Evet** — yalnızca siz yazarsanız |
 | Hassas konum | Digi APRS konum bildirimi | APRS-IS (herkese açık) | **Evet** — varsayılan kapalı |
 | Kurulum kimliği, sürüm, cihaz modeli, dil, çağrı işareti | Kullanım istatistiği, hizmet durumu, güncelleme bildirimi | ALGSoft sunucusu | Hayır |
 | Çağrı işareti, kurulum kimliği | Varlık (DigiLink/Digi Voice rozeti) | ALGSoft varlık sunucusu | Yalnızca bağlıyken |
@@ -136,6 +137,12 @@ Amatör telsizciliğin doğası gereği, ağa bağlandığınızda **çağrı i�
 - Ses **ALGSoft sunucularına gönderilmez**, ALGSoft tarafından **kaydedilmez ve saklanmaz.**
 - Bağlı olduğunuz konferans veya istasyonu dinleyen herkes sesinizi duyabilir; bazı istasyonlar kendi kurallarına göre yayınları kaydedebilir. Bu, ALGSoft'un kontrolü dışındadır.
 - İsteğe bağlı gürültü bastırma, otomatik seviye ve netlik EQ'su gibi ses işleme **tamamen cihazınızda** yapılır.
+
+### 5.2.1 Metin mesajları (Chat)
+
+- Bağlıyken **Chat** sekmesinden yazdığınız metin mesajları, ses bağlantısı protokolü üzerinden **anlık olarak** bağlı olduğunuz konferans/istasyona ve oradaki diğer kullanıcılara iletilir.
+- Mesajlar **ALGSoft sunucularına gönderilmez** ve ALGSoft tarafından **saklanmaz.** Oturum süresince yalnızca cihazınızın belleğinde gösterilir.
+- Mesajlarınız o konferanstaki herkes tarafından görülebilir; hassas bilgi paylaşmayın.
 
 ### 5.3 Konum (Digi APRS) — isteğe bağlı
 
@@ -270,7 +277,7 @@ Aşağıdaki veriler **yalnızca cihazınızda**, uygulamanın korumalı alanın
 | Üçüncü taraf | Paylaşılan veri | Amaç | Ne zaman |
 |---|---|---|---|
 | Amatör telsiz ses bağlantısı ağı (dizin ve aktarma sunucuları; ALGSoft'tan bağımsız işletmeci) | Çağrı işareti, parola, ad, QTH, IP adresi, ses | Ağa giriş ve ses bağlantısı | Giriş ve bağlantı sırasında |
-| Bağlandığınız istasyonlar, röleler, konferanslar ve dinleyicileri | Çağrı işareti, istasyon bilgileri, ses, IP adresi (protokol gereği) | Ses iletişimi | Bağlıyken |
+| Bağlandığınız istasyonlar, röleler, konferanslar ve dinleyicileri | Çağrı işareti, istasyon bilgileri, ses, Chat mesajları, IP adresi (protokol gereği) | Ses iletişimi | Bağlıyken |
 | APRS-IS ağı (ör. `aprs2.net` sunucuları) ve herkese açık APRS haritaları | Çağrı işareti, SSID, konum, simge, yorum | Digi APRS konum bildirimi | **Yalnızca Digi APRS açıkken** |
 | ipapi.co | IP adresi (anlık, saklanmadan) | Yaklaşık ülke/şehir tespiti | Kullanım istatistiği gönderiminde (sunucu tarafında) |
 | Apple | App Store'un ve iOS'un kendi topladığı veriler (indirme, satın alma geçmişi; **yalnızca siz "Geliştiricilerle Paylaş" seçeneğini açtıysanız** çökme ve kullanım verileri) | Dağıtım, uygulama analizi, kararlılık | Apple'ın politikasına göre |
@@ -327,6 +334,7 @@ Ağa bağlıyken çağrı işaretinizin diğer kullanıcılara görünmesi, amat
 | Varlık kaydı | ALGSoft varlık sunucusu | Bağlantı kesilince silinir; en geç 15 dk'da geçersiz, en geç 1 günde temizlenir |
 | Ham IP adresi | — | **Saklanmaz** (yalnızca anlık kullanılır) |
 | Ses | — | ALGSoft tarafından **saklanmaz** |
+| Chat mesajları | — | ALGSoft tarafından **saklanmaz** |
 | Konum | — | ALGSoft tarafından **saklanmaz** (APRS-IS ağının ve üçüncü taraf haritaların kendi saklama kuralları geçerlidir) |
 | Cihazdaki veriler | Cihazınız | Siz silene veya uygulamayı kaldırana kadar |
 | E-posta yazışmaları | ALGSoft e-posta sistemi | Talebin sonuçlandırılmasından itibaren en fazla 2 yıl |
@@ -402,6 +410,7 @@ Aşağıdaki tablo, App Store Connect "Uygulama Gizliliği" (App Privacy) bölü
 | Tanımlayıcılar → Kullanıcı Kimliği (çağrı işareti) | Uygulama İşlevselliği, Analiz | Evet | Hayır |
 | Tanımlayıcılar → Cihaz Kimliği (rastgele kurulum kimliği) | Uygulama İşlevselliği, Analiz | Evet | Hayır |
 | Kullanıcı İçeriği → Ses Verileri (PTT sırasında konuşma; anlık iletilir, ALGSoft tarafından saklanmaz) | Uygulama İşlevselliği | Hayır | Hayır |
+| Kullanıcı İçeriği → Diğer Kullanıcı İçeriği (Chat mesajları; anlık iletilir, ALGSoft tarafından saklanmaz) | Uygulama İşlevselliği | Hayır | Hayır |
 | Tanılama → Diğer Tanılama Verileri (uygulama/işletim sistemi sürümü, cihaz modeli, dil) | Analiz, Uygulama İşlevselliği | Evet | Hayır |
 
 **Gizlilik bildirimi (`PrivacyInfo.xcprivacy`):** Uygulama, Apple'ın "gerekçe gerektiren API" kurallarına uygun olarak şu API kategorilerini beyan eder: `UserDefaults` (CA92.1 — yalnızca uygulamanın kendi ayarları), dosya zaman damgası (C617.1 — yalnızca uygulamanın kendi dosyaları), sistem açılış süresi (35F9.1 — yalnızca süre ölçümü). İzleme: **false**; izleme alan adı: **yok.**
@@ -488,6 +497,7 @@ By installing or using the App you acknowledge that you have read the practices 
 |---|---|---|---|
 | Callsign, password, name, QTH | Sign-in to the voice-link network | Voice-link network (third party) | No (core function) |
 | Audio (only during PTT) | Transmitting your speech | The station/repeater/conference you are connected to | No (core function) |
+| Chat text messages | Text communication | The conference/station you are connected to | **Yes** — only if you type one |
 | Precise location | Digi APRS position reports | APRS-IS (public) | **Yes** — off by default |
 | Install ID, version, device model, language, callsign | Usage statistics, service status, update notices | ALGSoft server | No |
 | Callsign, install ID | Presence (DigiLink/Digi Voice badge) | ALGSoft presence server | Only while connected |
@@ -539,6 +549,12 @@ As is inherent to amateur radio, when you connect, **your callsign, name, locati
 - Audio is **not sent to ALGSoft servers** and is **not recorded or stored** by ALGSoft.
 - Anyone listening to the conference or station you are connected to can hear you; some stations may record transmissions under their own rules. This is outside ALGSoft's control.
 - Optional audio processing such as noise suppression, automatic level and clarity EQ runs **entirely on your device.**
+
+### 5.2.1 Text messages (Chat)
+
+- Text messages you type in the **Chat** tab while connected are relayed **in real time** over the voice-link protocol to the conference/station you are connected to and its other users.
+- Messages are **not sent to ALGSoft servers** and are **not stored** by ALGSoft. They are shown only in your device's memory during the session.
+- Your messages can be seen by everyone in that conference; do not share sensitive information.
 
 ### 5.3 Location (Digi APRS) — optional
 
@@ -673,7 +689,7 @@ The following data is kept **only on your device,** in the App's sandbox, and is
 | Third party | Data shared | Purpose | When |
 |---|---|---|---|
 | Amateur radio voice-link network (directory and relay servers; operator independent of ALGSoft) | Callsign, password, name, QTH, IP address, audio | Sign-in and voice link | During sign-in and while connected |
-| Stations, repeaters, conferences you connect to and their listeners | Callsign, station info, audio, IP address (by protocol) | Voice communication | While connected |
+| Stations, repeaters, conferences you connect to and their listeners | Callsign, station info, audio, Chat messages, IP address (by protocol) | Voice communication | While connected |
 | APRS-IS network (e.g. `aprs2.net` servers) and public APRS maps | Callsign, SSID, position, symbol, comment | Digi APRS position reports | **Only while Digi APRS is on** |
 | ipapi.co | IP address (momentarily, not stored) | Approximate country/city lookup | When usage statistics are sent (server side) |
 | Apple | Data the App Store and iOS themselves collect (downloads, purchase history; crash and usage data **only if you enabled "Share with App Developers"**) | Distribution, app analytics, stability | Per Apple's policy |
@@ -730,6 +746,7 @@ The visibility of your callsign to other users while connected is data **made pu
 | Presence record | ALGSoft presence server | Deleted on disconnect; expires within 15 min, purged within 1 day at the latest |
 | Raw IP address | — | **Not stored** (used momentarily only) |
 | Audio | — | **Not stored** by ALGSoft |
+| Chat messages | — | **Not stored** by ALGSoft |
 | Location | — | **Not stored** by ALGSoft (APRS-IS and third-party maps apply their own retention) |
 | On-device data | Your device | Until you delete it or delete the App |
 | E-mail correspondence | ALGSoft e-mail system | Up to 2 years after the request is closed |
@@ -805,6 +822,7 @@ The table below summarizes the information declared in the App Store Connect "Ap
 | Identifiers → User ID (callsign) | App Functionality, Analytics | Yes | No |
 | Identifiers → Device ID (random install ID) | App Functionality, Analytics | Yes | No |
 | User Content → Audio Data (speech during PTT; relayed in real time, not stored by ALGSoft) | App Functionality | No | No |
+| User Content → Other User Content (Chat messages; relayed in real time, not stored by ALGSoft) | App Functionality | No | No |
 | Diagnostics → Other Diagnostic Data (app/OS version, device model, language) | Analytics, App Functionality | Yes | No |
 
 **Privacy manifest (`PrivacyInfo.xcprivacy`):** In line with Apple's "required reason API" rules, the App declares these API categories: `UserDefaults` (CA92.1 — the App's own settings only), file timestamp (C617.1 — the App's own files only), system boot time (35F9.1 — elapsed-time measurement only). Tracking: **false**; tracking domains: **none.**

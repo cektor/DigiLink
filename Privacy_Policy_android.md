@@ -82,6 +82,7 @@ Uygulamayı yükleyerek veya kullanarak bu politikada açıklanan uygulamaları 
 |---|---|---|---|
 | Çağrı işareti, parola, ad, QTH | Ses bağlantısı ağına giriş | Ses bağlantısı ağı (üçüncü taraf) | Hayır (temel işlev) |
 | Ses (yalnızca PTT sırasında) | Konuşmanın iletilmesi | Bağlı olduğunuz istasyon/röle/konferans | Hayır (temel işlev) |
+| Chat metin mesajları | Metin iletişimi | Bağlı olduğunuz konferans/istasyon | **Evet** — yalnızca siz yazarsanız |
 | Hassas konum | Digi APRS konum bildirimi | APRS-IS (herkese açık) | **Evet** — varsayılan kapalı |
 | Kurulum kimliği, sürüm, cihaz modeli, dil, çağrı işareti | Kullanım istatistiği, hizmet durumu, güncelleme bildirimi | ALGSoft sunucusu | Hayır |
 | Çağrı işareti, kurulum kimliği | Varlık (DigiLink/Digi Voice rozeti) | ALGSoft varlık sunucusu | Yalnızca bağlıyken |
@@ -132,6 +133,12 @@ Amatör telsizciliğin doğası gereği, ağa bağlandığınızda **çağrı i�
 - Ses **ALGSoft sunucularına gönderilmez**, ALGSoft tarafından **kaydedilmez ve saklanmaz**.
 - Bağlı olduğunuz konferans veya istasyonu dinleyen herkes sesinizi duyabilir; bazı istasyonlar kendi kurallarına göre yayınları kaydedebilir. Bu, ALGSoft'un kontrolü dışındadır.
 - İsteğe bağlı gürültü bastırma, otomatik seviye ve netlik EQ'su gibi ses işleme **tamamen cihazınızda** yapılır.
+
+### 5.2.1 Metin mesajları (Chat)
+
+- Bağlıyken **Chat** sekmesinden yazdığınız metin mesajları, ses bağlantısı protokolü üzerinden **anlık olarak** bağlı olduğunuz konferans/istasyona ve oradaki diğer kullanıcılara iletilir.
+- Mesajlar **ALGSoft sunucularına gönderilmez** ve ALGSoft tarafından **saklanmaz.** Oturum süresince yalnızca cihazınızın belleğinde gösterilir.
+- Mesajlarınız o konferanstaki herkes tarafından görülebilir; hassas bilgi paylaşmayın.
 
 ### 5.3 Konum (Digi APRS) — isteğe bağlı
 
@@ -260,7 +267,7 @@ Aşağıdaki veriler **yalnızca cihazınızda**, uygulamanın özel (diğer uyg
 | Üçüncü taraf | Paylaşılan veri | Amaç | Ne zaman |
 |---|---|---|---|
 | Amatör telsiz ses bağlantısı ağı (dizin ve aktarma sunucuları; ALGSoft'tan bağımsız işletmeci) | Çağrı işareti, parola, ad, QTH, IP adresi, ses | Ağa giriş ve ses bağlantısı | Giriş ve bağlantı sırasında |
-| Bağlandığınız istasyonlar, röleler, konferanslar ve dinleyicileri | Çağrı işareti, istasyon bilgileri, ses, IP adresi (protokol gereği) | Ses iletişimi | Bağlıyken |
+| Bağlandığınız istasyonlar, röleler, konferanslar ve dinleyicileri | Çağrı işareti, istasyon bilgileri, ses, Chat mesajları, IP adresi (protokol gereği) | Ses iletişimi | Bağlıyken |
 | APRS-IS ağı (ör. `aprs2.net` sunucuları) ve herkese açık APRS haritaları | Çağrı işareti, SSID, konum, simge, yorum | Digi APRS konum bildirimi | **Yalnızca Digi APRS açıkken** |
 | ipapi.co | IP adresi (anlık, saklanmadan) | Yaklaşık ülke/şehir tespiti | Kullanım istatistiği gönderiminde (sunucu tarafında) |
 | alphacephei.com | Standart dosya indirme isteği (IP adresi) | Altyazı modeli indirme | **Yalnızca altyazıyı açıp model indirdiğinizde** |
@@ -313,6 +320,7 @@ Ağa bağlıyken çağrı işaretinizin diğer kullanıcılara görünmesi, amat
 | Varlık kaydı | ALGSoft varlık sunucusu | Bağlantı kesilince silinir; en geç 15 dk'da geçersiz, en geç 1 günde temizlenir |
 | Ham IP adresi | — | **Saklanmaz** (yalnızca anlık kullanılır) |
 | Ses | — | ALGSoft tarafından **saklanmaz** |
+| Chat mesajları | — | ALGSoft tarafından **saklanmaz** |
 | Konum | — | ALGSoft tarafından **saklanmaz** (APRS-IS ağının ve üçüncü taraf haritaların kendi saklama kuralları geçerlidir) |
 | Cihazdaki veriler | Cihazınız | Siz silene veya uygulamayı kaldırana kadar |
 | E-posta yazışmaları | ALGSoft e-posta sistemi | Talebin sonuçlandırılmasından itibaren en fazla 2 yıl |
@@ -382,11 +390,13 @@ Aşağıdaki tablo, Google Play Console "Veri güvenliği" formunda beyan edilen
 | Veri türü (Google Play kategorisi) | Toplanıyor | Paylaşılıyor | Amaç | İsteğe bağlı | Geçici işleme |
 |---|---|---|---|---|---|
 | Konum → Hassas konum | Evet | Evet (APRS-IS, kullanıcı tarafından başlatılır) | Uygulama işlevi | **Evet** | Hayır |
-| Konum → Yaklaşık konum (IP'den ülke/şehir) | Evet | Hayır | Analiz | Hayır | Hayır |
+| Konum → Yaklaşık konum (IP'den ülke/şehir; Digi APRS'te yaklaşık izin verilirse) | Evet | Evet (APRS-IS, yalnızca Digi APRS) | Analiz, uygulama işlevi | Hayır | Hayır |
 | Kişisel bilgiler → Kullanıcı kimlikleri (çağrı işareti) | Evet | Evet (ses bağlantısı ağı) | Uygulama işlevi, analiz | Hayır | Hayır |
 | Kişisel bilgiler → Ad | Evet | Evet (ses bağlantısı ağı) | Uygulama işlevi | Hayır | Hayır |
-| Ses → Ses kayıtları (PTT sırasında konuşma) | Evet | Evet (bağlanılan istasyonlar) | Uygulama işlevi | Hayır | **Evet** |
-| Uygulama bilgileri ve performans → Diğer (sürüm, işletim sistemi, cihaz modeli, dil) | Evet | Hayır | Analiz, uygulama işlevi | Hayır | Hayır |
+| Kişisel bilgiler → Diğer bilgiler (QTH / istasyon açıklaması) | Evet | Evet (ses bağlantısı ağı) | Uygulama işlevi | Evet | Hayır |
+| Mesajlar → Diğer uygulama içi mesajlar (Chat) | Evet | Evet (bağlanılan konferans/istasyon) | Uygulama işlevi | **Evet** | **Evet** |
+| Ses → Konuşma veya ses kayıtları (PTT sırasında konuşma) | Evet | Evet (bağlanılan istasyonlar) | Uygulama işlevi | **Evet** (yalnızca PTT) | **Evet** |
+| Uygulama bilgileri ve performansı → Diğer uygulama performansı verileri (sürüm, işletim sistemi, cihaz modeli, dil) | Evet | Hayır | Analiz, uygulama işlevi | Hayır | Hayır |
 | Cihaz veya diğer kimlikler (rastgele kurulum kimliği) | Evet | Hayır | Analiz, uygulama işlevi | Hayır | Hayır |
 
 | Güvenlik uygulaması | Beyan |
@@ -477,6 +487,7 @@ By installing or using the App you acknowledge that you have read the practices 
 |---|---|---|---|
 | Callsign, password, name, QTH | Sign-in to the voice-link network | Voice-link network (third party) | No (core function) |
 | Audio (only during PTT) | Transmitting your speech | The station/repeater/conference you are connected to | No (core function) |
+| Chat text messages | Text communication | The conference/station you are connected to | **Yes** — only if you type one |
 | Precise location | Digi APRS position reports | APRS-IS (public) | **Yes** — off by default |
 | Install ID, version, device model, language, callsign | Usage statistics, service status, update notices | ALGSoft server | No |
 | Callsign, install ID | Presence (DigiLink/Digi Voice badge) | ALGSoft presence server | Only while connected |
@@ -527,6 +538,12 @@ As is inherent to amateur radio, when you connect, **your callsign, name, locati
 - Audio is **not sent to ALGSoft servers** and is **not recorded or stored** by ALGSoft.
 - Anyone listening to the conference or station you are connected to can hear you; some stations may record transmissions under their own rules. This is outside ALGSoft's control.
 - Optional audio processing such as noise suppression, automatic level and clarity EQ runs **entirely on your device**.
+
+### 5.2.1 Text messages (Chat)
+
+- Text messages you type in the **Chat** tab while connected are relayed **in real time** over the voice-link protocol to the conference/station you are connected to and its other users.
+- Messages are **not sent to ALGSoft servers** and are **not stored** by ALGSoft. They are shown only in your device's memory during the session.
+- Your messages can be seen by everyone in that conference; do not share sensitive information.
 
 ### 5.3 Location (Digi APRS) — optional
 
@@ -655,7 +672,7 @@ The following data is kept **only on your device,** in the App's private storage
 | Third party | Data shared | Purpose | When |
 |---|---|---|---|
 | Amateur radio voice-link network (directory and relay servers; operator independent of ALGSoft) | Callsign, password, name, QTH, IP address, audio | Sign-in and voice link | During sign-in and while connected |
-| Stations, repeaters, conferences you connect to and their listeners | Callsign, station info, audio, IP address (by protocol) | Voice communication | While connected |
+| Stations, repeaters, conferences you connect to and their listeners | Callsign, station info, audio, Chat messages, IP address (by protocol) | Voice communication | While connected |
 | APRS-IS network (e.g. `aprs2.net` servers) and public APRS maps | Callsign, SSID, position, symbol, comment | Digi APRS position reports | **Only while Digi APRS is on** |
 | ipapi.co | IP address (momentarily, not stored) | Approximate country/city lookup | When usage statistics are sent (server side) |
 | alphacephei.com | Standard file-download request (IP address) | Caption model download | **Only when you enable captions and download a model** |
@@ -708,6 +725,7 @@ The visibility of your callsign to other users while connected is data **made pu
 | Presence record | ALGSoft presence server | Deleted on disconnect; expires within 15 min, purged within 1 day at the latest |
 | Raw IP address | — | **Not stored** (used momentarily only) |
 | Audio | — | **Not stored** by ALGSoft |
+| Chat messages | — | **Not stored** by ALGSoft |
 | Location | — | **Not stored** by ALGSoft (APRS-IS and third-party maps apply their own retention) |
 | On-device data | Your device | Until you delete it or uninstall the App |
 | E-mail correspondence | ALGSoft e-mail system | Up to 2 years after the request is closed |
@@ -777,11 +795,13 @@ The table below summarizes the information declared in the Google Play Console "
 | Data type (Google Play category) | Collected | Shared | Purpose | Optional | Processed ephemerally |
 |---|---|---|---|---|---|
 | Location → Precise location | Yes | Yes (APRS-IS, user-initiated) | App functionality | **Yes** | No |
-| Location → Approximate location (country/city from IP) | Yes | No | Analytics | No | No |
+| Location → Approximate location (country/city from IP; Digi APRS when approximate permission is granted) | Yes | Yes (APRS-IS, Digi APRS only) | Analytics, app functionality | No | No |
 | Personal info → User IDs (callsign) | Yes | Yes (voice-link network) | App functionality, analytics | No | No |
 | Personal info → Name | Yes | Yes (voice-link network) | App functionality | No | No |
-| Audio → Voice or sound recordings (speech during PTT) | Yes | Yes (connected stations) | App functionality | No | **Yes** |
-| App info and performance → Other (version, OS, device model, language) | Yes | No | Analytics, app functionality | No | No |
+| Personal info → Other info (QTH / station description) | Yes | Yes (voice-link network) | App functionality | Yes | No |
+| Messages → Other in-app messages (Chat) | Yes | Yes (connected conference/station) | App functionality | **Yes** | **Yes** |
+| Audio → Voice or sound recordings (speech during PTT) | Yes | Yes (connected stations) | App functionality | **Yes** (PTT only) | **Yes** |
+| App info and performance → Other app performance data (version, OS, device model, language) | Yes | No | Analytics, app functionality | No | No |
 | Device or other IDs (random install ID) | Yes | No | Analytics, app functionality | No | No |
 
 | Security practice | Declaration |
