@@ -10,6 +10,7 @@
 | **İletişim / Contact** | [info@algsoft.net.tr](mailto:info@algsoft.net.tr) |
 | **Web** | <https://digilink.algsoft.net.tr> — <https://algsoft.net.tr> |
 | **Çevrimiçi sürüm / Online version** | <https://digilink.algsoft.net.tr/privacy.php> |
+| **Kullanım Koşulları / Terms of Use** | <https://digilink.algsoft.net.tr/terms.php> |
 | **Yürürlük tarihi / Effective date** | 15 Ekim 2026 / October 15, 2026 |
 | **Son güncelleme / Last updated** | 15 Ekim 2026 / October 15, 2026 |
 
@@ -122,7 +123,7 @@ Gizlilikle ilgili tüm soru, talep ve şikâyetleriniz için yukarıdaki e-posta
 |---|---|---|
 | Çağrı işareti | Ağa giriş, istasyon listesinde görünme, bağlantı kurma | Ses bağlantısı ağı dizin ve aktarma (relay) sunucuları, bağlandığınız istasyonlar |
 | Parola | Yalnızca ağa giriş (kimlik doğrulama) | Yalnızca ses bağlantısı ağının giriş sunucuları |
-| Ad ve konum açıklaması (QTH) | Ağda istasyon bilgisi olarak gösterilmesi | Ses bağlantısı ağı ve diğer kullanıcılar |
+| Ad ve konum açıklaması (QTH) — **isteğe bağlı** | Ağda istasyon bilgisi olarak gösterilmesi | Ses bağlantısı ağı ve diğer kullanıcılar |
 
 Amatör telsizciliğin doğası gereği, ağa bağlandığınızda **çağrı işaretiniz, adınız, konum açıklamanız ve çevrimiçi durumunuz ağın diğer kullanıcılarına görünür.** Bu, hizmetin temel işleyişidir ve ağın kendi kurallarına tabidir.
 
@@ -139,6 +140,12 @@ Amatör telsizciliğin doğası gereği, ağa bağlandığınızda **çağrı i�
 - Bağlıyken **Chat** sekmesinden yazdığınız metin mesajları, ses bağlantısı protokolü üzerinden **anlık olarak** bağlı olduğunuz konferans/istasyona ve oradaki diğer kullanıcılara iletilir.
 - Mesajlar **ALGSoft sunucularına gönderilmez** ve ALGSoft tarafından **saklanmaz.** Oturum süresince yalnızca cihazınızın belleğinde gösterilir.
 - Mesajlarınız o konferanstaki herkes tarafından görülebilir; hassas bilgi paylaşmayın.
+
+### 5.2.2 Engelleme ve bildirimler
+
+- **Engelle:** Engellediğiniz istasyonların listesi **yalnızca cihazınızda** tutulur ve hiçbir yere gönderilmez. Engellenen istasyonun sesi çalınmaz, sohbet mesajları gösterilmez ve istasyon listelerinizde görünmez.
+- **Bildir:** Bir istasyonu uygulama içinden bildirdiğinizde ALGSoft sunucusuna (`digilink.algsoft.net.tr`) şunlar gönderilir: bildirilen çağrı işareti, seçtiğiniz sebep, yazdığınız ayrıntı (isteğe bağlı), bağlı olduğunuz konferans/istasyon, sizin çağrı işaretiniz, kurulum kimliği, platform ve uygulama sürümü.
+- Bu bilgiler **yalnızca bildirimi incelemek ve [Kullanım Koşulları](https://digilink.algsoft.net.tr/terms.php)'nı uygulamak** için kullanılır; bildirimler 24 saat içinde incelenir, **en fazla 1 yıl** saklanır ve üçüncü taraflarla paylaşılmaz.
 
 ### 5.3 Konum (Digi APRS) — isteğe bağlı
 
@@ -305,6 +312,7 @@ KVKK m. 5 ve GDPR m. 6 kapsamında verileriniz şu hukuki sebeplere dayanılarak
 |---|---|
 | Ağa giriş, ses iletimi, bağlantının sürdürülmesi | Hizmetin sunulması / sözleşmenin ifası (KVKK m. 5/2-c; GDPR m. 6/1-b) |
 | Digi APRS konum bildirimi, mikrofon kullanımı, altyazı ve sesli rehberlik | Açık rızanız ve özelliği sizin etkinleştirmeniz (KVKK m. 5/1; GDPR m. 6/1-a) — dilediğiniz an geri alabilirsiniz |
+| Bildirimlerin incelenmesi ve Kullanım Koşulları'nın uygulanması | Meşru menfaat — kullanıcı güvenliği ve kötüye kullanımın önlenmesi (KVKK m. 5/2-f; GDPR m. 6/1-f) |
 | Kullanım istatistikleri, hizmet durumu ve güncelleme kontrolü, varlık bilgisi | Meşru menfaat — hizmetin güvenliği, sürekliliği ve geliştirilmesi (KVKK m. 5/2-f; GDPR m. 6/1-f) |
 | Yasal taleplere yanıt | Hukuki yükümlülük (KVKK m. 5/2-ç; GDPR m. 6/1-c) |
 
@@ -321,6 +329,8 @@ Ağa bağlıyken çağrı işaretinizin diğer kullanıcılara görünmesi, amat
 | Ham IP adresi | — | **Saklanmaz** (yalnızca anlık kullanılır) |
 | Ses | — | ALGSoft tarafından **saklanmaz** |
 | Chat mesajları | — | ALGSoft tarafından **saklanmaz** |
+| Bildirimler (Bildir) | ALGSoft sunucusu | En fazla 1 yıl |
+| Engellenen istasyonlar listesi | Cihazınız | Siz kaldırana veya uygulamayı silene kadar |
 | Konum | — | ALGSoft tarafından **saklanmaz** (APRS-IS ağının ve üçüncü taraf haritaların kendi saklama kuralları geçerlidir) |
 | Cihazdaki veriler | Cihazınız | Siz silene veya uygulamayı kaldırana kadar |
 | E-posta yazışmaları | ALGSoft e-posta sistemi | Talebin sonuçlandırılmasından itibaren en fazla 2 yıl |
@@ -392,12 +402,13 @@ Aşağıdaki tablo, Google Play Console "Veri güvenliği" formunda beyan edilen
 | Konum → Hassas konum | Evet | Evet (APRS-IS, kullanıcı tarafından başlatılır) | Uygulama işlevi | **Evet** | Hayır |
 | Konum → Yaklaşık konum (IP'den ülke/şehir; Digi APRS'te yaklaşık izin verilirse) | Evet | Evet (APRS-IS, yalnızca Digi APRS) | Analiz, uygulama işlevi | Hayır | Hayır |
 | Kişisel bilgiler → Kullanıcı kimlikleri (çağrı işareti) | Evet | Evet (ses bağlantısı ağı) | Uygulama işlevi, analiz | Hayır | Hayır |
-| Kişisel bilgiler → Ad | Evet | Evet (ses bağlantısı ağı) | Uygulama işlevi | Hayır | Hayır |
+| Kişisel bilgiler → Ad | Evet | Evet (ses bağlantısı ağı) | Uygulama işlevi | **Evet** | **Evet** |
 | Kişisel bilgiler → Diğer bilgiler (QTH / istasyon açıklaması) | Evet | Evet (ses bağlantısı ağı) | Uygulama işlevi | Evet | Hayır |
 | Mesajlar → Diğer uygulama içi mesajlar (Chat) | Evet | Evet (bağlanılan konferans/istasyon) | Uygulama işlevi | **Evet** | **Evet** |
 | Ses → Konuşma veya ses kayıtları (PTT sırasında konuşma) | Evet | Evet (bağlanılan istasyonlar) | Uygulama işlevi | **Evet** (yalnızca PTT) | **Evet** |
 | Uygulama bilgileri ve performansı → Diğer uygulama performansı verileri (sürüm, işletim sistemi, cihaz modeli, dil) | Evet | Hayır | Analiz, uygulama işlevi | Hayır | Hayır |
 | Cihaz veya diğer kimlikler (rastgele kurulum kimliği) | Evet | Hayır | Analiz, uygulama işlevi | Hayır | Hayır |
+| Uygulama etkinliği → Kullanıcı tarafından oluşturulan diğer içerikler (Bildir ayrıntısı) | Evet | Hayır | Sahtekarlığı önleme, güvenlik ve uygunluk | **Evet** | Hayır |
 
 | Güvenlik uygulaması | Beyan |
 |---|---|
@@ -527,7 +538,7 @@ Send any privacy question, request or complaint to the e-mail address above. Req
 |---|---|---|
 | Callsign | Signing in, appearing in the station list, connecting | Voice-link network directory and relay servers, stations you connect to |
 | Password | Sign-in (authentication) only | Only the voice-link network's sign-in servers |
-| Name and location text (QTH) | Shown as your station info on the network | Voice-link network and its other users |
+| Name and location text (QTH) — **optional** | Shown as your station info on the network | Voice-link network and its other users |
 
 As is inherent to amateur radio, when you connect, **your callsign, name, location text and online status are visible to other users of the network.** This is how the service works and is governed by the network's own rules.
 
@@ -544,6 +555,12 @@ As is inherent to amateur radio, when you connect, **your callsign, name, locati
 - Text messages you type in the **Chat** tab while connected are relayed **in real time** over the voice-link protocol to the conference/station you are connected to and its other users.
 - Messages are **not sent to ALGSoft servers** and are **not stored** by ALGSoft. They are shown only in your device's memory during the session.
 - Your messages can be seen by everyone in that conference; do not share sensitive information.
+
+### 5.2.2 Blocking and reports
+
+- **Block:** The list of stations you block is kept **only on your device** and is never sent anywhere. A blocked station's audio is not played, its chat messages are hidden and it no longer appears in your station lists.
+- **Report:** When you report a station from within the app, the following is sent to an ALGSoft server (`digilink.algsoft.net.tr`): the reported callsign, the reason you choose, the details you type (optional), the conference/station you are connected to, your callsign, install ID, platform and app version.
+- This information is used **only to review the report and enforce the [Terms of Use](https://digilink.algsoft.net.tr/terms.php)**; reports are reviewed within 24 hours, kept for **at most 1 year** and not shared with third parties.
 
 ### 5.3 Location (Digi APRS) — optional
 
@@ -710,6 +727,7 @@ Under KVKK Art. 5 and GDPR Art. 6, your data is processed on these legal bases:
 |---|---|
 | Sign-in, voice transmission, keeping the link alive | Performance of the service / contract (KVKK 5/2-c; GDPR 6(1)(b)) |
 | Digi APRS position reports, microphone use, captions and voice guidance | Your consent and your enabling the feature (KVKK 5/1; GDPR 6(1)(a)) — you may withdraw it at any time |
+| Reviewing reports and enforcing the Terms of Use | Legitimate interests — user safety and abuse prevention (KVKK 5/2-f; GDPR 6(1)(f)) |
 | Usage statistics, service status and update check, presence | Legitimate interests — security, continuity and improvement of the service (KVKK 5/2-f; GDPR 6(1)(f)) |
 | Responding to lawful requests | Legal obligation (KVKK 5/2-ç; GDPR 6(1)(c)) |
 
@@ -726,6 +744,8 @@ The visibility of your callsign to other users while connected is data **made pu
 | Raw IP address | — | **Not stored** (used momentarily only) |
 | Audio | — | **Not stored** by ALGSoft |
 | Chat messages | — | **Not stored** by ALGSoft |
+| Reports (Report) | ALGSoft server | At most 1 year |
+| Blocked stations list | Your device | Until you remove it or delete the app |
 | Location | — | **Not stored** by ALGSoft (APRS-IS and third-party maps apply their own retention) |
 | On-device data | Your device | Until you delete it or uninstall the App |
 | E-mail correspondence | ALGSoft e-mail system | Up to 2 years after the request is closed |
@@ -797,12 +817,13 @@ The table below summarizes the information declared in the Google Play Console "
 | Location → Precise location | Yes | Yes (APRS-IS, user-initiated) | App functionality | **Yes** | No |
 | Location → Approximate location (country/city from IP; Digi APRS when approximate permission is granted) | Yes | Yes (APRS-IS, Digi APRS only) | Analytics, app functionality | No | No |
 | Personal info → User IDs (callsign) | Yes | Yes (voice-link network) | App functionality, analytics | No | No |
-| Personal info → Name | Yes | Yes (voice-link network) | App functionality | No | No |
+| Personal info → Name | Yes | Yes (voice-link network) | App functionality | **Yes** | **Yes** |
 | Personal info → Other info (QTH / station description) | Yes | Yes (voice-link network) | App functionality | Yes | No |
 | Messages → Other in-app messages (Chat) | Yes | Yes (connected conference/station) | App functionality | **Yes** | **Yes** |
 | Audio → Voice or sound recordings (speech during PTT) | Yes | Yes (connected stations) | App functionality | **Yes** (PTT only) | **Yes** |
 | App info and performance → Other app performance data (version, OS, device model, language) | Yes | No | Analytics, app functionality | No | No |
 | Device or other IDs (random install ID) | Yes | No | Analytics, app functionality | No | No |
+| App activity → Other user-generated content (report details) | Yes | No | Fraud prevention, security and compliance | **Yes** | No |
 
 | Security practice | Declaration |
 |---|---|
